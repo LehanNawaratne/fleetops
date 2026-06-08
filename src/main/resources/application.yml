@@ -3,9 +3,9 @@ spring:
     name: fleetops
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/fleetops
-    username: your_username
-    password: your_password
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/fleetops}
+    username: ${SPRING_DATASOURCE_USERNAME:fleetops_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:fleetops_pass}
     driver-class-name: org.postgresql.Driver
 
   jpa:
