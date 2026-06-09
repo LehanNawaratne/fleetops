@@ -29,6 +29,12 @@ public class DriverService {
                 .collect(Collectors.toList());
     }
 
+    public DriverResponse getDriverById(Long id) {
+        Driver driver = driverRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Driver not found with id: " + id));
+        return DriverMapper.toResponse(driver);
+    }
+
     public DriverResponse createDriver(DriverRequest request) {
         validateDuplicateLicense(request.getLicenseNumber());
 
