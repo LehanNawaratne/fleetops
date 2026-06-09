@@ -13,7 +13,7 @@ import com.example.fleetops.trip.enums.TripStatus;
 import com.example.fleetops.trip.mapper.TripMapper;
 import com.example.fleetops.trip.repository.TripRepository;
 import com.example.fleetops.vehicle.entity.Vehicle;
-import com.example.fleetops.vehicle.enums.VehicleStatus;
+import com.example.fleetops.trip.enums.VehicleStatus;
 import com.example.fleetops.vehicle.repository.VehicleRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
